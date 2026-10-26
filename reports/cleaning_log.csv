@@ -1,0 +1,14 @@
+step,rows_affected,action
+Skip the title line above the header,1,parsing
+Remove non-loan text rows (section separator + 2 footer totals),3,remove invalid rows
+"Drop 30 columns (empty, single-value, URL, free-text description, duplicates of other fields)",0,remove columns
+"Convert int_rate, revol_util ('10.65%') and term (' 36 months') to numbers",42535,type conversion
+Employment length missing (kept as 'Unknown'),1112,missing values
+Convert emp_length text to years (0–10),41423,type conversion
+Convert 5 month-year text columns to dates,42535,date conversion
+Split 'Does not meet the credit policy' into its own flag,2749,standardisation
+Merge home_ownership 'NONE' into 'OTHER',8,standardisation
+"Lower-case employer titles, tidy purpose labels ('debt_consolidation' -> 'Debt consolidation')",42535,standardisation
+annual_inc missing (kept; excluded from income analysis),4,missing values
+revol_util missing (kept; excluded from utilisation analysis),90,missing values
+Credit-history fields missing for the same loans (kept),29,missing values

@@ -1,0 +1,9 @@
+state_code,state_name,region,loans
+ND,North Dakota,Midwest,0
+ME,Maine,Northeast,3
+ID,Idaho,West,9
+NE,Nebraska,Midwest,11
+IA,Iowa,Midwest,12
+IN,Indiana,Midwest,19
+MS,Mississippi,South,26
+TN,Tennessee,South,32

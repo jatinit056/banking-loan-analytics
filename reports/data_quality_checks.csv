@@ -1,0 +1,11 @@
+,result
+sum of loan_amnt equals file control total,True
+installment matches amortisation formula (±$1),99.97%
+funded_amnt > loan_amnt,0
+funded_amnt < loan_amnt (partly funded),1997
+interest rate range (%),5.42 – 24.59
+DTI range,0.0 – 29.99
+annual income range ($),"1,896 – 6,000,000"
+total_pymnt equals its components (±$0.02),100.00%
+loans with recoveries that are not charged off,0
+columns with a single value,"initial_list_status, collections_12_mths_ex_med, policy_code, application_type"

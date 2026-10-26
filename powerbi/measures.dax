@@ -1,0 +1,75 @@
+// =====================================================================
+// DAX measures of powerbi/Banking_LendingClub.pbix — table _Measures, grouped by display folder.
+// Copied from the model that the dashboard uses (same names, formulas and formats).
+// =====================================================================
+
+// ------------------------------------------------------------ Portfolio
+Loans =                                // format: #,0
+    COUNTROWS ( loans )
+Funded Amount =                        // format: \$#,0
+    SUM ( loans[funded_amnt] )
+Requested Amount =                     // format: \$#,0
+    SUM ( loans[loan_amnt] )
+Funding Rate % =                       // format: 0.0%
+    DIVIDE ( [Funded Amount], [Requested Amount] )
+Average Loan =                         // format: \$#,0
+    AVERAGE ( loans[loan_amnt] )
+Average Interest Rate =                // format: 0.00"%"
+    AVERAGE ( loans[int_rate] )
+Weighted Interest Rate =               // format: 0.00"%"
+    DIVIDE ( SUMX ( loans, loans[int_rate] * loans[funded_amnt] ), [Funded Amount] )
+60-Month Share % =                     // format: 0.0%
+    DIVIDE ( CALCULATE ( [Loans], loans[term_months] = 60 ), [Loans] )
+Median Income =                        // format: \$#,0
+    MEDIAN ( loans[annual_inc] )
+
+// ------------------------------------------------------------ Risk
+Resolved Loans =                       // format: #,0
+    SUM ( loans[resolved_flag] )
+Charged Off Loans =                    // format: #,0
+    SUM ( loans[bad_flag] )
+Default Rate % =                       // format: 0.0%
+    DIVIDE ( [Charged Off Loans], [Resolved Loans] )
+Default Rate % (known income) =        // format: 0.0%
+    CALCULATE ( [Default Rate %], KEEPFILTERS ( NOT ISBLANK ( loans[income_band] ) ) )
+Principal Lost =                       // format: \$#,0
+    SUM ( loans[net_principal_loss] )
+Recoveries =                           // format: \$#,0
+    CALCULATE ( SUM ( loans[recoveries] ), loans[is_bad] = TRUE () )
+Loss Given Default % =                 // format: 0.0%
+    DIVIDE ( [Principal Lost], CALCULATE ( [Funded Amount], loans[is_bad] = TRUE () ) )
+Net Return % =                         // format: 0.0%
+    DIVIDE (
+        CALCULATE ( SUM ( loans[total_pymnt] ), loans[is_resolved] = TRUE () ),
+        CALCULATE ( SUM ( loans[funded_amnt] ), loans[is_resolved] = TRUE () )
+    ) - 1
+Net Return 36m % =                     // format: 0.0%
+    CALCULATE ( [Net Return %], loans[term_months] = 36 )
+Policy Exception Share % =             // format: 0.0%
+    DIVIDE ( CALCULATE ( [Loans], loans[meets_credit_policy] = FALSE () ), [Loans] )
+Default Rate vs Portfolio (pts) =      // format: +0.0;-0.0;0.0
+    ( [Default Rate %] - CALCULATE ( [Default Rate %], ALL ( loans ) ) ) * 100
+
+// ------------------------------------------------------------ Customers
+Income P90 =                           // format: \$#,0
+    CALCULATE ( PERCENTILE.INC ( loans[annual_inc], 0.9 ), ALL ( loans ) )
+High-Income Default Rate % =           // format: 0.0%
+    CALCULATE ( [Default Rate %], loans[is_high_income] = TRUE () )
+
+// ------------------------------------------------------------ Time intelligence
+Funded YTD =                           // format: \$#,0
+    TOTALYTD ( [Funded Amount], 'Date'[Date] )
+Funded Previous Year =                 // format: \$#,0
+    CALCULATE ( [Funded Amount], SAMEPERIODLASTYEAR ( 'Date'[Date] ) )
+Funded YoY % =                         // format: 0.0%
+    DIVIDE ( [Funded Amount] - [Funded Previous Year], [Funded Previous Year] )
+Funded Running Total =                 // format: \$#,0
+    CALCULATE ( [Funded Amount], FILTER ( ALL ( 'Date'[Date] ), 'Date'[Date] <= MAX ( 'Date'[Date] ) ) )
+
+// ------------------------------------------------------------ Ranking
+Grade Rank by Default =                // format: 0
+    IF ( HASONEVALUE ( loans[grade] ), RANKX ( ALL ( loans[grade] ), [Default Rate %], , DESC, DENSE ) )
+Funded (Top 10 States) =               // format: \$#,0
+    VAR StateRank = RANKX ( ALLSELECTED ( dim_state ), [Funded Amount], , DESC, DENSE )
+    RETURN
+        IF ( NOT ISBLANK ( [Funded Amount] ) && StateRank <= 10, [Funded Amount] )

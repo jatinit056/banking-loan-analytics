@@ -1,0 +1,8 @@
+outcome,loan_status,loans,funded_amount,outstanding_principal
+Active,Current,2084,32376100.00,5713425.28
+Active,Late (31-120 days),66,1046225.00,239020.04
+Active,In Grace Period,31,508600.00,103469.82
+Active,Late (16-30 days),7,133000.00,24426.61
+Charged Off,Charged Off,6326,72185950.00,0.00
+Charged Off,Default,1,5000.00,1596.74
+Fully Paid,Fully Paid,34020,354041275.00,0.00

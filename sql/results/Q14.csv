@@ -1,0 +1,3 @@
+policy_group,loans,pct_of_loans,default_rate_pct,avg_int_rate_pct
+Does not meet policy,2749,6.46,27.72,14.15
+Meets current policy,39786,93.54,14.80,12.03

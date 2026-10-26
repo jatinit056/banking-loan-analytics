@@ -1,0 +1,13 @@
+region,risk_rank,purpose,resolved_loans,default_rate_pct
+Midwest,1,Small business,290,27.59
+Midwest,2,Other,556,16.91
+Midwest,3,Debt consolidation,2655,16.38
+Northeast,1,Small business,355,29.30
+Northeast,2,Moving,182,23.08
+Northeast,3,Medical,133,22.56
+South,1,Small business,644,28.42
+South,2,Educational,135,26.67
+South,3,Other,1404,20.09
+West,1,Small business,563,31.26
+West,2,Educational,106,26.42
+West,3,House,124,20.97

@@ -1,0 +1,21 @@
+state_code,state_name,region,resolved_loans,default_rate_pct,avg_int_rate_pct
+FL,Florida,South,2936,19.55,11.95
+MO,Missouri,Midwest,731,19.15,11.91
+GA,Georgia,South,1432,17.25,11.89
+MD,Maryland,South,1078,17.16,12.46
+CA,California,West,7117,17.09,12.10
+WA,Washington,West,839,16.69,12.16
+NC,North Carolina,South,756,16.40,11.85
+NJ,New Jersey,Northeast,1872,16.13,12.24
+AZ,Arizona,West,881,15.78,12.16
+MI,Michigan,Midwest,746,15.68,12.02
+MN,Minnesota,Midwest,628,14.65,11.74
+IL,Illinois,Midwest,1579,14.63,12.13
+NY,New York,Northeast,3861,14.12,12.06
+PA,Pennsylvania,Northeast,1553,14.10,11.78
+OH,Ohio,Midwest,1244,13.83,12.08
+CT,Connecticut,Northeast,759,13.70,11.84
+CO,Colorado,West,814,13.64,11.75
+VA,Virginia,South,1419,13.39,12.12
+MA,Massachusetts,Northeast,1357,13.34,11.81
+TX,Texas,South,2783,13.15,12.05

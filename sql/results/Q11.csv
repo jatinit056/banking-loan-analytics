@@ -1,0 +1,5 @@
+region,loans,funded_amount,pct_of_funded,default_rate_pct,median_income
+South,13940,151007475.00,32.81,15.69,58800
+West,12044,130987725.00,28.46,16.96,60000
+Northeast,10414,113156475.00,24.58,14.35,60000
+Midwest,6137,65144475.00,14.15,15.40,54500

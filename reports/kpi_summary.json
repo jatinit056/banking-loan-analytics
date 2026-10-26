@@ -1,0 +1,322 @@
+{
+  "loans": 42535,
+  "borrowers": 42535,
+  "requested_amount": 471701350.0,
+  "funded_amount": 460296150.0,
+  "investor_funded_amount": 431297694.630218,
+  "funding_rate": 0.975821,
+  "fully_funded_loans_share": 0.95305,
+  "avg_loan_amount": 11089.722581,
+  "median_loan_amount": 9700.0,
+  "avg_int_rate": 12.16521,
+  "weighted_avg_int_rate": 12.887972,
+  "share_60_month": 0.258634,
+  "median_income": 59000.0,
+  "avg_dti": 13.373043,
+  "resolved_loans": 40347,
+  "active_loans": 2188,
+  "fully_paid_loans": 34020,
+  "charged_off_loans": 6327,
+  "default_rate": 0.156815,
+  "principal_lost": 44293848.577037,
+  "loss_rate_on_funded": 0.10392,
+  "lgd_charged_off": 0.613565,
+  "recoveries": 4137589.972963,
+  "portfolio_net_return": 0.084827,
+  "interest_received": 94752276.91,
+  "policy_exception_loans": 2749,
+  "policy_exception_share": 0.064629,
+  "states": 50,
+  "rows_read": 42538,
+  "non_loan_rows": 3,
+  "raw_columns": 74,
+  "empty_columns": 21,
+  "dropped_columns": 30,
+  "clean_columns": 58,
+  "footer_total": 471701350.0,
+  "installment_formula_match": "99.97%",
+  "partly_funded_loans": 1997,
+  "first_issue": "2007-06-01",
+  "last_issue": "2011-12-01",
+  "income_p90": 116736.0,
+  "income_fence": 146250.0,
+  "vintage_loans": {
+    "2007": 603,
+    "2008": 2393,
+    "2009": 5281,
+    "2010": 12537,
+    "2011": 21721
+  },
+  "vintage_funded": {
+    "2007": 4791550.0,
+    "2008": 19975025.0,
+    "2009": 51814750.0,
+    "2010": 126351175.0,
+    "2011": 257363650.0
+  },
+  "vintage_default_rate": {
+    "2007": 0.262023,
+    "2008": 0.207271,
+    "2009": 0.136906,
+    "2010": 0.140486,
+    "2011": 0.163172
+  },
+  "vintage_avg_rate": {
+    "2007": 11.825108,
+    "2008": 12.061964,
+    "2009": 12.437247,
+    "2010": 11.985268,
+    "2011": 12.223746
+  },
+  "funded_growth_2010_2011_pct": 103.689162,
+  "grade_default_rate": {
+    "A": 0.060306,
+    "B": 0.127509,
+    "C": 0.17973,
+    "D": 0.232133,
+    "E": 0.283131,
+    "F": 0.357205,
+    "G": 0.361925
+  },
+  "grade_avg_rate": {
+    "A": 7.342708,
+    "B": 11.014209,
+    "C": 13.500835,
+    "D": 15.577149,
+    "E": 17.376768,
+    "F": 19.265304,
+    "G": 20.45125
+  },
+  "grade_net_return": {
+    "A": 0.07151,
+    "B": 0.087524,
+    "C": 0.088753,
+    "D": 0.088722,
+    "E": 0.099083,
+    "F": 0.062109,
+    "G": 0.088586
+  },
+  "grade_share": {
+    "A": 0.239403,
+    "B": 0.291266,
+    "C": 0.205478,
+    "D": 0.141436,
+    "E": 0.079793,
+    "F": 0.030587,
+    "G": 0.012037
+  },
+  "grade36_net_return": {
+    "A": 0.070556,
+    "B": 0.090117,
+    "C": 0.091182,
+    "D": 0.098457,
+    "E": 0.096903,
+    "F": 0.001233,
+    "G": 0.026781
+  },
+  "grade36_default_rate": {
+    "A": 0.058799,
+    "B": 0.110099,
+    "C": 0.155181,
+    "D": 0.194856,
+    "E": 0.226749,
+    "F": 0.317191,
+    "G": 0.359091
+  },
+  "emp_unknown_default_rate": 0.231954,
+  "emp_known_default_rate": 0.154829,
+  "verified_share_2011": 0.680079,
+  "active_share_2011": 0.097693,
+  "vintage_resolved_share": {
+    "2007": 1.0,
+    "2008": 1.0,
+    "2009": 1.0,
+    "2010": 0.994736,
+    "2011": 0.902307
+  },
+  "term_default_rate": {
+    "36": 0.122919,
+    "60": 0.27808
+  },
+  "term_net_return": {
+    "36": 0.08424,
+    "60": 0.086173
+  },
+  "term_grade_default": {
+    "A_36": 0.058799,
+    "A_60": 0.1,
+    "B_36": 0.110099,
+    "B_60": 0.207935,
+    "C_36": 0.155181,
+    "C_60": 0.262182,
+    "D_36": 0.194856,
+    "D_60": 0.314879,
+    "E_36": 0.226749,
+    "E_60": 0.325287,
+    "F_36": 0.317191,
+    "F_60": 0.379781,
+    "G_36": 0.359091,
+    "G_60": 0.364341
+  },
+  "purpose_default_rate": {
+    "Major purchase": 0.11041,
+    "Wedding": 0.113898,
+    "Car": 0.113941,
+    "Credit card": 0.114735,
+    "Home improvement": 0.138252,
+    "Vacation": 0.150649,
+    "Debt consolidation": 0.161727,
+    "House": 0.174129,
+    "Moving": 0.174837,
+    "Other": 0.176792,
+    "Medical": 0.178771,
+    "Renewable energy": 0.196078,
+    "Educational": 0.208531,
+    "Small business": 0.293197
+  },
+  "purpose_loans": {
+    "Major purchase": 2311,
+    "Wedding": 1004,
+    "Car": 1615,
+    "Credit card": 5477,
+    "Home improvement": 3199,
+    "Vacation": 400,
+    "Debt consolidation": 19776,
+    "House": 426,
+    "Moving": 629,
+    "Other": 4425,
+    "Medical": 753,
+    "Renewable energy": 106,
+    "Educational": 422,
+    "Small business": 1992
+  },
+  "verification_default_rate": {
+    "Not Verified": 0.144687,
+    "Source Verified": 0.155215,
+    "Verified": 0.175902
+  },
+  "policy_default_rate": {
+    "Does not meet policy": 0.277231,
+    "Meets current policy": 0.148024
+  },
+  "income_default_rate": {
+    "<30K": 0.199853,
+    "30\u201350K": 0.175934,
+    "50\u201375K": 0.156083,
+    "75\u2013100K": 0.134668,
+    "100\u2013150K": 0.114898,
+    "150K+": 0.131963
+  },
+  "dti_default_rate": {
+    "0\u20135": 0.13476,
+    "5\u201310": 0.136174,
+    "10\u201315": 0.156711,
+    "15\u201320": 0.169069,
+    "20\u201325": 0.180588,
+    "25\u201330": 0.168237
+  },
+  "home_default_rate": {
+    "MORTGAGE": 0.14883,
+    "OTHER": 0.208333,
+    "OWN": 0.158596,
+    "RENT": 0.16348
+  },
+  "home_share": {
+    "MORTGAGE": 0.445727,
+    "OTHER": 0.003385,
+    "OWN": 0.076431,
+    "RENT": 0.474456
+  },
+  "util_default_rate": {
+    "0\u201325%": 0.109794,
+    "25\u201350%": 0.140373,
+    "50\u201375%": 0.172497,
+    "75\u2013100%": 0.206824,
+    "100%+": 0.37931
+  },
+  "inq_default_rate": {
+    "0": 0.124879,
+    "1": 0.161883,
+    "2": 0.1716,
+    "3": 0.214145,
+    "4+": 0.27379
+  },
+  "emp_default_rate": {
+    "1 year": 0.156675,
+    "10+ years": 0.168374,
+    "2 years": 0.142042,
+    "3 years": 0.1492,
+    "4 years": 0.148575,
+    "5 years": 0.153356,
+    "6 years": 0.155536,
+    "7 years": 0.164205,
+    "8 years": 0.152722,
+    "9 years": 0.138801,
+    "< 1 year": 0.15273,
+    "Unknown": 0.231954
+  },
+  "high_income_default_rate": 0.125595,
+  "high_income_table": {
+    "Other borrowers": {
+      "loans": 38281.0,
+      "default_rate": 0.16024,
+      "net_return": 0.078127,
+      "avg_rate": 12.088652
+    },
+    "Top 10% income (\u2265 $116,736)": {
+      "loans": 4254.0,
+      "default_rate": 0.125595,
+      "net_return": 0.122749,
+      "avg_rate": 12.854144
+    }
+  },
+  "large_loan_table": {
+    "Loans under $25K": {
+      "loans": 39411.0,
+      "default_rate": 0.152264,
+      "net_return": 0.083669,
+      "avg_rate": 11.938108
+    },
+    "Large loans ($25K+)": {
+      "loans": 3124.0,
+      "default_rate": 0.21989,
+      "net_return": 0.09045,
+      "avg_rate": 15.030234
+    }
+  },
+  "region_funded_share": {
+    "South": 0.328066,
+    "West": 0.284573,
+    "Northeast": 0.245834,
+    "Midwest": 0.141527
+  },
+  "region_default_rate": {
+    "South": 0.156872,
+    "West": 0.169596,
+    "Northeast": 0.143496,
+    "Midwest": 0.153952
+  },
+  "worst_state": "FL",
+  "worst_state_default_rate": 0.195504,
+  "best_state": "TX",
+  "best_state_default_rate": 0.131513,
+  "top_state": "CA",
+  "top_state_funded_share": 0.177649,
+  "missing_states": [
+    "ND"
+  ],
+  "corr_with_default": {
+    "Annual income": -0.069034,
+    "Credit history (yrs)": -0.017448,
+    "Employment (yrs)": 0.015182,
+    "Delinquencies (2y)": 0.021029,
+    "Loan amount": 0.042885,
+    "Debt-to-income": 0.04765,
+    "Public records": 0.057577,
+    "Installment / income": 0.075161,
+    "Revolving utilisation": 0.099083,
+    "Inquiries (6m)": 0.099166,
+    "Term (months)": 0.176314,
+    "Interest rate": 0.212973
+  }
+}
